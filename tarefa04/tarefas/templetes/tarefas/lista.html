@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tarefas (04)</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tarefas</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        table{
+            border-collapse:collapse;
+            width:700px;
+        }
+
+        th,td{
+            border:1px solid #999;
+            padding:10px;
+        }
+
+        .atrasada{
+            background:#ffb6b6;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1>Lista de Tarefas</h1>
+
+<table>
+
+<tr>
+    <th>Nome</th>
+    <th>Status</th>
+    <th>Prazo</th>
+</tr>
+
+{% for tarefa in tarefas %}
+
+<tr {% if tarefa.prazo < hoje and tarefa.status != "Concluída" %}class="atrasada"{% endif %}>
+
+    <td>{{ tarefa.nome }}</td>
+
+    <td>{{ tarefa.status }}</td>
+
+    <td>{{ tarefa.prazo }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
+</body>
+</html>
