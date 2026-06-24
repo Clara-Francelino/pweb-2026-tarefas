@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Postagens</h2>
+
+{% for post in posts %}
+
+<div class="card">
+
+<h3>{{ post.titulo }}</h3>
+
+<p>{{ post.data_publicacao }}</p>
+
+<a href="{% url 'post' post.id %}">
+
+Ler postagem
+
+</a>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+<h2>{{ post.titulo }}</h2>
+
+<p>{{ post.data_publicacao }}</p>
+
+<img src="{{ post.imagem.url }}">
+
+<p>{{ post.texto }}</p>
+
+</div>
+
+{% endblock %}

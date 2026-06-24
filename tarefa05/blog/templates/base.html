@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Blog</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin:0;
+            background:#f4f4f4;
+        }
+
+        header{
+            background:#333;
+            color:white;
+            padding:20px;
+        }
+
+        header a{
+            color:white;
+            text-decoration:none;
+        }
+
+        main{
+            width:80%;
+            margin:auto;
+            padding:20px;
+        }
+
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:8px;
+        }
+
+        img{
+            max-width:100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>
+<a href="{% url 'index' %}">
+Meu Blog
+</a>
+</h1>
+
+</header>
+
+<main>
+
+{% block content %}
+
+{% endblock %}
+
+</main>
+
+<footer>
+
+Desenvolvido por Maria Clara Oliveira Francelino
+
+</footer>
+
+</body>
+</html>
